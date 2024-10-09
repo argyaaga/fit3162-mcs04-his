@@ -1,0 +1,77 @@
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #94D1BE;
+  color: white;
+}
+
+button:hover {
+  background-color: #9DB5B2;
+}
+
+button.cancel {
+  background-color: #6c757d;
+}
+
+button.cancel:hover {
+  background-color: #5a6268;
+}
+
+.patient-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.patient-box {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: rgb(69, 69, 69);
+  border: 1px solid #e9ecef;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  border-radius: 16px;
+  flex-grow: 2;
+  flex-shrink: 10;
+  overflow: hidden;
+  min-width: 0px;
+  max-width: 260px;
+  height: fit-content;
+  max-height: 84px;
+  margin: 1px;
+  transition: all 0.15s ease;
+  text-align: left !important;
+}
+
+.patient-box:hover {
+  flex-grow: 4;
+  max-width: 370px;
+  color: gray;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.patient-text {
+  min-width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.avatar-image {
+  min-width: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  vertical-align: middle;
+  float: left;
+  border-radius: 8px;
+  margin-right: 10px;
+}

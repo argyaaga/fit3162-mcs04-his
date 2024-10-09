@@ -1,0 +1,92 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.header{
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 24px;
+color: #333;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+input {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button.buttonstyle {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #94D1BE;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  border-radius:4px;
+}
+
+button.return-button {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #9DB5B2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  border-radius:4px;
+}
+
+.return-button:hover {
+  background-color: grey;
+}
+
+button.buttonstyle:hover {
+  background-color: #4cae4c;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -6px;
+}
+
+.suggestion-box {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.suggestion-box div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-box div:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,364 @@
+/* Modal Styles */
+.ReactModal__Content {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #DAF0EE; /* Light blue color */
+  color: black; /* Set text color */
+  padding: 20px; /* Enable vertical scrolling if content overflows */
+  max-height: 80vh; /* Set a maximum height for the modal */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Input Styles */
+input,
+select,
+textarea {
+  border: 1px solid black;
+  color: black; /* Set text color */
+  padding: 10px; /* Add padding for better spacing */
+  border-radius: 5px; /* Add rounded corners */
+  width: 100%; /* Make inputs full width */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  margin-bottom: 10px; /* Add space between inputs */
+}
+
+/* Date Picker Styles */
+.react-datepicker-wrapper {
+  width: 100%; /* Make date picker full width */
+}
+
+.react-datepicker__input-container input {
+  width: 100%; /* Make date picker input full width */
+}
+
+/* Time Picker Styles */
+.react-time-picker {
+  width: 100%; /* Make time picker full width */
+}
+
+.react-time-picker__wrapper {
+  border: 1px solid black;
+  border-radius: 5px; /* Add rounded corners */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+/* Button Styles */
+button {
+  background-color: #94D1BE; /* Primary blue color */
+  color: #3B413C; /* White text color */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-right: 10px; /* Add space between buttons */
+}
+
+button:hover {
+  color: white;
+  background-color: #9DB5B2; /* Darker blue on hover */
+}
+
+/* Specific Button Styles */
+button.cancel {
+  background-color: #6c757d; /* Gray color for cancel button */
+}
+
+button.cancel:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+
+.custom-time-picker {
+  width: 100%; /* Ensure the TimePicker takes full width */
+  padding: 10px; /* Add padding */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px; /* Add rounded corners */
+  border: 1px solid #ccc; /* Add border */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.custom-time-picker input {
+  width: 100%; /* Ensure the input takes full width */
+  padding: 10px; /* Add padding */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px; /* Add rounded corners */
+  border: 1px solid #ccc; /* Add border */
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  min-width: calc(0.54em * 6 + 0.217em * 2);
+  flex-grow: 1;
+  display: inline-block;
+}
+
+.custom-time-picker button {
+  width: 100%;
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Increase font size */
+  border-radius: 5px; /* Add rounded corners */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  background-color: #94D1BE; /* Button background color */
+  color: #3B413C; /* Button text color */
+  display: inherit;
+}
+
+.custom-time-picker button:hover {
+  background-color: #9DB5B2; /* Darker blue on hover */
+  display: inline-block;
+}
+
+.appointment-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.appointment-box {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex-grow: 2;
+  flex-shrink: 10;
+  overflow: hidden;
+  min-width: 0px;
+  max-width: 300px;
+  height: fit-content;
+  max-height: 84px;
+  margin: 1px;
+  transition: all 0.15s ease;
+}
+
+.appointment-box:hover {
+  flex-grow: 4;
+  max-width: 360px;
+  color: gray;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.appointment-text {
+  min-width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.avatar-image {
+  min-width: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  vertical-align: middle;
+  float: left;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.appointment-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+/* .appointment-box {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 370px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+} */
+
+.appointment-box.disabled {
+  background-color: #000;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* .appointment-text {
+  text-align: left;
+} */
+
+.appointment-image {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.appointment-summary-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow boxes to wrap onto multiple lines */
+  gap: 10px;
+}
+
+.appointment-summary-box {
+  border: 1px solid #000000;
+  padding: 10px;
+  cursor: pointer; /* Indicate that the box is clickable */
+  flex: 1 0 200px; /* Each box takes at least 200px and grows to fill available space */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transitions for smooth effect */
+}
+
+.appointment-summary-box:hover {
+  transform: scale(1.05); /* Slightly enlarge the box */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.appointment-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointment-container th,
+.appointment-container td {
+  min-width: 90%;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.appointment-container th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.appointment-container td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px; /* Adjust as needed */
+}
+
+.appointment-container tr {
+  background-color: #f2f2f2;
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ebebeb;
+}
+
+.appointment-container tr:hover {
+  background-color: #DAF0EE;
+}
+
+/* Add this CSS to your stylesheet */
+@media (max-width: 600px) {
+  .appointment-container table,
+  .appointment-container thead,
+  .appointment-container tbody,
+  .appointment-container th,
+  .appointment-container td,
+  .appointment-container tr {
+    display: block;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .appointment-image {
+    width: 100%;
+    height: 0;
+    vertical-align: right;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .appointment-container tr {
+    margin-bottom: 15px;
+  }
+
+  .appointment-container td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .appointment-container td::before {
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .appointment-container th {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .appointment-container {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    -webkit-transition: background-color 200ms ease;
+    -moz-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+    -ms-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+  }
+
+  .appointment-container thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .appointment-container tr {
+    -webkit-transition: background-color 200ms ease;
+    -moz-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+    -ms-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+  }
+
+  .appointment-container tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .appointment-container tbody td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    border: none;
+  }
+
+  .appointment-container tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 40%;
+    padding-right: 10px;
+    color: #333;
+  }
+}

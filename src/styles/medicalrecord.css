@@ -1,0 +1,146 @@
+.record-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+
+.record-box {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: whitesmoke;
+  color: rgb(69, 69, 69);
+  border: 1px solid #e9ecef;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+  border-radius: 16px;
+  flex-grow: 2;
+  flex-shrink: 10;
+  overflow: hidden;
+  width: 80%;
+  max-height: 112px;
+  margin: auto;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  transition: all 0.15s ease;
+}
+
+.record-box:hover {
+  flex-grow: 4;
+  color: black;
+  max-height: 450px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.record-text {
+  min-width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow: hidden;
+}
+
+.record-text-long {
+  min-width: 0;
+  max-height: 150px;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  overflow-y: auto;
+}
+
+.medical-record-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  max-width: 90vw; /* Set a max-width to prevent overflow */
+}
+
+.medical-record-table th,
+.medical-record-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word; /* Ensure long words break */
+  overflow-wrap: break-word; /* Ensure long words break */
+  max-width: 200px; /* Set a fixed max-width to ensure ellipsis works */
+  overflow: hidden;
+}
+
+.medical-record-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.medical-record-table tr {
+  -webkit-transition: background-color 200ms ease;
+  -moz-transition: background-color 200ms ease;
+  -o-transition: background-color 200ms ease;
+  -ms-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+.medical-record-table tr:hover {
+  background-color: #daf0ee; /* Change background color on hover */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ebebeb;
+}
+
+@media (max-width: 600px) {
+  .medical-record-table {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    -webkit-transition: background-color 200ms ease;
+    -moz-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+    -ms-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+  }
+
+  .medical-record-table thead {
+    display: none; /* Hide table headers on mobile */
+  }
+
+  .medical-record-table tr {
+    -webkit-transition: background-color 200ms ease;
+    -moz-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+    -ms-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+  }
+
+  .medical-record-table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .medical-record-table tbody td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    border: none;
+    max-width: 85vw;
+  }
+
+  .medical-record-table tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 40%;
+    padding-right: 10px;
+    color: #333;
+  }
+}

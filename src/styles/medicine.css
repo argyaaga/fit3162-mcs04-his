@@ -1,0 +1,157 @@
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button.cancel {
+  background-color: #dc3545;
+}
+
+button.cancel:hover {
+  background-color: #c82333;
+}
+
+.medicine-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.medicine-box {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 2px;
+  flex-grow: 2;
+  flex-shrink: 10;
+  min-width: 0;
+  max-width: 200px;
+  height: fit-content;
+  transition: all 0.15s ease;
+}
+
+.medicine-box:hover {
+  flex-grow: 4;
+  max-width: 270px;
+  color: gray;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.medicine-box.disabled {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.5
+  ); /* Grey background with 50% opacity */
+  color: #fff; /* White text */
+  position: relative; /* Ensure the box is positioned relative for the pseudo-element */
+}
+
+.medicine-box.disabled::after {
+  content: "UNAVAILABLE"; /* Text to display */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  font-size: 2em; /* Large text */
+  color: red; /* Red text */
+  font-weight: bold; /* Bold text */
+  z-index: 1; /* Ensure the text is above other content */
+}
+
+.medicine-text {
+  min-width: 0;
+  max-width: inherit;
+  text-align: left;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.medicine-image {
+  min-width: 0;
+  width: 12rem;
+  height: 6rem;
+  object-fit: cover;
+  vertical-align: middle;
+  margin: auto;
+  border-radius: 8px;
+}
+
+.label {
+  margin-right: 10px; /* Adjust the value as needed */
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Adjust width as needed */
+  height: 24px; /* Adjust height to make it thinner */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Adjust height to make it thinner */
+  width: 20px; /* Adjust width to match height */
+  left: 2px; /* Adjust position to center within the slider */
+  bottom: 2px; /* Adjust position to center within the slider */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3; /* Blue color for the checked state */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Adjust translation to match new width */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px; /* Adjust border-radius to match new height */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

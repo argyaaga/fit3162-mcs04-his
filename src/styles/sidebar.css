@@ -1,0 +1,100 @@
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px; /* Increased for more comfortable layout */
+  height: 100%;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: lightgray;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  transform: none; /* Ensure no transform is applied on hover */
+}
+
+.account-header {
+  padding: 20px;
+  background-color: #94d1be;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.medical-logos {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.account-info,
+.role-details {
+  padding: 20px;
+}
+
+.user-details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.role-details h2 {
+  margin-top: -20px;
+  color: #333;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  text-align: left;
+  padding-left: 0; /* Ensure no padding */
+}
+
+.role-details h4 {
+  margin-top: 20px;
+  color: #333;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+.role-details p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+h4 {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}

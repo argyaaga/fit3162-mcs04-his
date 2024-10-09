@@ -1,0 +1,127 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  /* background: linear-gradient(to bottom, #94D1BE, white); Adjust gradient */
+  width: 100%;
+}
+
+.main-header {
+  text-align: center;
+  padding: 20px;
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+}
+
+.main-content {
+  width: 100%;
+  height: fit-content;
+  background: linear-gradient(to bottom, #94D1BE, white);
+  top: 0;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #DAF0EE;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid #3B413C 1px;
+}
+
+.account-header {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+}
+
+.account-info {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 20px; /* Space below the account info */
+}
+
+.medical-logos {
+  margin-right: 20px; /* Space between image and text */
+  height: 50px;
+  width: 50px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column; /* Stack user details vertically */
+}
+
+.role-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 75px; /* Space between image and text */
+}
+
+.button-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* max-width: 400px; */
+  margin: auto;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.button-container {
+  display: flex;
+  flex: none;
+  width: 120px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.circle-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.circle-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.circle-button:hover {
+  background-color: lightgray;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.bottom-container {
+  background-color: #fafafa; /* Background color */
+  text-align: center; /* Center text */
+  border-top: 1px solid #ccc; /* Top border */
+  border-radius: 20px;
+  width: 100%;
+  /* height: 100%; Take up the bottom half of the page */
+  flex-shrink: 0; /* Prevent shrinking */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: -ms-autohiding-scrollbar;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+}
+
+.bottom-container::-webkit-scrollbar {
+  display: display-inside;
+}
