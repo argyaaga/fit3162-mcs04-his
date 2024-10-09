@@ -30,8 +30,6 @@ export const TextTranscribe = props => {
                 //'Access-Control-Allow-Origin': '*'
             }
         }
-        // const transcription = axios.post('http://26.229.21.190/transcribe', data, config).then(response => response.data);
-        //testing from multiple devices using radmin vpn, this link will not work outside of testing
         axios.post(TranscriptionConfig.ENDPOINT, data, config)
             .then(transcription => {
                 if (text) {
