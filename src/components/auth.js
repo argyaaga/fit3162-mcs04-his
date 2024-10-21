@@ -74,6 +74,7 @@ export const Auth = ({ setIsAuth }) => {
                     window.alert("LOG IN SUCCESSFULLY: " + result.user.email);
                     if (!querySnapshot.empty) {
                         const userData = querySnapshot.docs[0].data();
+                        window.alert("LOG IN SUCCESSFULLY: " + result.user.email);
                         if (userData.Role === "") {
                             navigate("/waiting");
                         } else {
@@ -82,7 +83,9 @@ export const Auth = ({ setIsAuth }) => {
                             navigate("/dashboard");
                         }
                     } else {
-                        console.error("User not found in 'accounts' collection after email/password sign-in");
+                        // Account doesn't exist, sign out the user and alert
+                        auth.signOut(); 
+                        window.alert("Account does not exist. Please sign up.");
                     }
                 });
         } catch (err) {
